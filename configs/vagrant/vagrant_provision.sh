@@ -42,14 +42,14 @@ sudo a2enmod headers
 sudo a2enmod rewrite
 ### Copy vhost file ###
 sudo rm /etc/apache2/sites-enabled/000-default.conf
-sudo cp /var/www/disignir/configs/vagrant/vhost.conf /etc/apache2/sites-enabled/000-default.conf
+sudo cp /var/www/dev/configs/vagrant/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 #restart apache
 echo "!!!!!RESTARTING APACHE!!!!"
 sudo service apache2 restart
 
 ####set user .conf file for mysql###
-sudo rm /etc/mysql/my.cnf
-sudo cp /var/www/disignir/configs/vagrant/my.cnf /etc/mysql/my.cnf
+#sudo rm /etc/mysql/my.cnf
+#sudo cp /var/www/disignir/configs/vagrant/my.cnf /etc/mysql/my.cnf
 
 #restart mysql
 echo "!!!!!RESTARTING MYSQL!!!!"
@@ -96,7 +96,7 @@ echo " "
 echo "====================================================="
 echo "=== Install drush"
 echo "====================================================="
-sudo composer global require drush/drush:8.*
+composer global require drush/drush:8.*
 
 # echo " "
 #echo "======================================================"
