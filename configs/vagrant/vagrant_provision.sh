@@ -91,6 +91,13 @@ cd ~/
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
+# Install drush
+echo " "
+echo "====================================================="
+echo "=== Install drush"
+echo "====================================================="
+sudo composer global require drush/drush:8.*
+
 # echo " "
 #echo "======================================================"
 #echo "=== Configure NGINX "
